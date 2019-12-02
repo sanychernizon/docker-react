@@ -8,6 +8,4 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-afterAll(async done => {
-  done();
-});
+afterAll(() => setTimeout(() => process.exit(), 1000))
