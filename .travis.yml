@@ -6,4 +6,4 @@ before_install:
   - docker build -t sany/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run sany/docker-react npm run test -- --coverage --maxWorkers=4
+  - docker run -e CI=true sany/docker-react npm run test
